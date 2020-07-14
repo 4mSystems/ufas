@@ -1,6 +1,8 @@
 @extends('layouts.master-without-nav')
 
+
 @section('content')
+ 
     <!-- Begin page -->
     @php
         $setting =   \App\Setting::orderBy('id','desc')->first()
@@ -12,7 +14,7 @@
             <div class="card-body">
                 <h3 class="text-center m-0">
                     <a href="index" class="logo logo-admin"><img src="{{ Storage::url($setting->logo) }}"
-                                                                 style="width:200px;height:100px;" alt="logo"></a>
+                                                                 style="width:200px;height:40px;" alt="logo"></a>
                 </h3>
 
                 <div class="p-3">

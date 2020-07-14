@@ -4355,7 +4355,7 @@ Invoice
   Account Pages
 ===================*/
 .accountbg {
-  background: url("../images/bg.jpg");
+  background: url("../images/bground.png");
   position: absolute;
     background-repeat: no-repeat;
     background-position:center;
