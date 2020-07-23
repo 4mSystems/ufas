@@ -8,17 +8,26 @@
         $setting =   \App\Setting::orderBy('id','desc')->first()
 
     @endphp
+
+    <style>
+    .logose{
+        background-color:rgb(45,45,45);
+
+    }
+
+
+    </style>
     <div class="accountbg"></div>
     <div class="wrapper-page">
         <div class="card">
             <div class="card-body">
-                <h3 class="text-center m-0">
+                  <div class="logose">
+                <h3 class="text-center m-0"  >
                     <a href="index" class="logo logo-admin"><img src="{{ Storage::url($setting->logo) }}"
                                                                  style="width:200px;height:40px;" alt="logo"></a>
                 </h3>
-
-                <div class="p-3">
-{{--                    <h4 class="text-muted font-18 m-b-5 text-center">Welcome Back !</h4>--}}
+                 </div>
+                <div class="p-3"> 
                     <p class="text-muted text-center">Sign in {{$setting->system_name_en}}</p>
 
                     <form  method="POST" action="{{ route('login') }}" class="form-horizontal m-t-30" >

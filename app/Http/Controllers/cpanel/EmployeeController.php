@@ -51,12 +51,11 @@ class EmployeeController extends Controller
 
             if (request()->ajax()) {
                 if (request()->has('dept_id')) {
-                    $emp_job_id = User::get('job_id');
-
-                    $select = request()->has('select') ? request('select') : '';
-
+                    $emp_job_id = User::get('job_id'); 
+                    $select = request()->has('select') ? request('select') : ''; 
                     $job = Job::whereNotIn('id', $emp_job_id)->where('dept_id', request('dept_id'))
-                        ->pluck('name', 'id');
+                        ->pluck('name', 'id'); 
+ 
 
                     return Form::select('job_id', $job, $select
                         , ["class" => "form-control", 'placeholder' => trans('admin.chooseJob')]);
@@ -140,9 +139,12 @@ class EmployeeController extends Controller
 
             if (request()->ajax()) {
                 if (request()->has('dept_id')) {
+                    
                     $emp_job_id = User::where('id','!=',$id)->get('job_id');
+                     
 
                     $select = request()->has('select') ? request('select') : '';
+                     
 
                     $job = Job::whereNotIn('id', $emp_job_id)->where('dept_id', request('dept_id'))
                         ->pluck('name', 'id');

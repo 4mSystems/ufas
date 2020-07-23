@@ -98,7 +98,7 @@
 {{--    <link rel="shortcut icon" type="image/png" href="{{url('public/app-assets/images/ico/ico.jpg')}}">--}}
       <link rel="shortcut icon" type="image/png" href="{{Storage::url($setting->logo)}}">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">  
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <!-- BEGIN VENDOR CSS-->
     <link rel="stylesheet" type="text/css" href="{{url('public/app-assets/css-rtl/bootstrap.css')}}">

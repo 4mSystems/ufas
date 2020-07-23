@@ -137,8 +137,23 @@ class DepartmentsController extends Controller
     public function destroy($id)
     {
          
+        if($id == 1){
+            session()->flash('errors',trans('admin.admindeleteerror'));
+            return redirect(url('departments'));
+        }
+        
         $department =  Department::find($id);
-         $department->delete();
+        try {  
+               $department->delete();
+        } catch (\Illuminate\Database\QueryException $e) {
+             
+                //SQLSTATE[23000]: Integrity constraint violation
+                session()->flash('errors',trans('admin.canntdelete'));
+                return redirect(url('departments')); 
+             
+       
+        }
+    
 
             session()->flash('success',trans('admin.departmentdeleted'));
             return redirect(url('departments'));  

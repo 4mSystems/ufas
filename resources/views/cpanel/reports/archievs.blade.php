@@ -409,6 +409,8 @@
                                 $('#createModal').modal('show');
                             });
 
+
+
                             var id;
                             $(document).on('click', '#edit_attend', function () {
                                 id =  $(this).data('attendid');
@@ -428,6 +430,8 @@
                                     }
                                 })
                             });
+
+
 
 
                         </script>

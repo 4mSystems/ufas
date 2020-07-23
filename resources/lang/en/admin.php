@@ -145,15 +145,15 @@ return [
     'selectEmp'=>' select Employee  ',
 
 
-    'day'=>'اليوم',
-    'attendance_delay'=>'تاخير حضور',
-    'leave_early'=>'خروج مبكر',
-    'attendance_early'=>'حضور مبكر',
-    'leave_delay'=>'خروج متاخر',
-    'no_attendance'=>'عدم توقيع حضور',
-    'no_leave'=>'عدم توقيع خروج',
-    'absences'=>'غياب',
-    'mothlyreport'=>'التقرير الشهري',
+    'day'=>'day',
+    'attendance_delay'=>'attendance delay',
+    'leave_early'=>'leave early',
+    'attendance_early'=>'attendance early',
+    'leave_delay'=>'leave delay',
+    'no_attendance'=>'no attendance',
+    'no_leave'=>'no leave',
+    'absences'=>'absences',
+    'mothlyreport'=>'mothly report',
 
     'total_attendance_delay'=>'total attendance delay',
     'total_leave_early'=>'total leave early',
@@ -178,6 +178,13 @@ return [
     'totalvacations'=>'Total Vacations',
     'totalpermissions'=>'Total Permission',
     'totaldepts'=>'Total Departments\Branches',
+    
+    'totalabsence'=>'total absence',
+    'totalnoattendance'=>'total no attendance',
+    'totalnoleave'=>'total no leave',
+    'totalovertime'=>'total overtime',
+    'totalattendancedelay'=>'total attendance delay',
+    'totalleaveearly'=>'total leaveearly',
     'upload'=>'Upload File'
 
 

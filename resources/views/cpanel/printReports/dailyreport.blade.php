@@ -61,6 +61,7 @@
                          <div style="text-align: left; padding: 25px;  display:inline;width: 300px;float:left;">
 
                         @if(!empty($setting->logo))
+                        
                             <img src="{{ Storage::url($setting->logo) }}" style="width:100px;height:75px;"/>
 
                         @endif

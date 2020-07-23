@@ -3,7 +3,7 @@
 
 @section('content') 
 @push('js')
-
+     
   <script type="text/javascript">
   
   $(document).ready(function(){
@@ -12,8 +12,8 @@
       url:"{{url('employee/create')}}",
       type:'get',
       datatype:'html',
-      data:{country_id:"{{old('dept_id')}}",select:"{{old('job_id')}}"},
-      info:function(data){
+      data:{dept_id:"{{old('dept_id')}}",select:"{{old('job_id')}}"},
+      success:function(data){
         $('.job').html(data);
       }
     });
@@ -26,7 +26,7 @@ $(document).on('change','.dept_id',function(){
       type:'get',
       datatype:'html',
       data:{dept_id:department,select:''},
-      info:function(data){
+      success:function(data){
         $('.job').html(data);
       }
     });

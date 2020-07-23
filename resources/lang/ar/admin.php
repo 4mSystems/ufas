@@ -181,7 +181,7 @@ return [
     'totalnoleave'=>'اجمالى عدم توقيع انصراف',
     'totalovertime'=>'اجمالى الساعات  الاضافيه',
     'totalattendancedelay'=>'اجمالى الحضور المتاخر',
-    'totalleaveearly'=>'اجمالى الانصراف المتاخر',
+    'totalleaveearly'=>'اجمالى الانصراف المبكر',
     'upload'=>'رفع الملف'
 
 

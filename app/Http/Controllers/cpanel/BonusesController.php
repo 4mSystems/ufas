@@ -163,10 +163,22 @@ class BonusesController extends Controller
      */
     public function destroy($id)
     {
-        
-        $bounses =  Bonuses::find($id);
-        $bounses->delete();
+        if($id == 1){
+            session()->flash('errors',trans('admin.admindeleteerror'));
+            return redirect(url('bonuses'));
+        }
 
+        $bounses =  Bonuses::find($id);
+        try {
+            $bounses->delete();
+        } catch (\Illuminate\Database\QueryException $e) {
+             
+                //SQLSTATE[23000]: Integrity constraint violation
+                session()->flash('errors',trans('admin.canntdelete'));
+                return redirect(url('bonuses')); 
+             
+       
+        }
            session()->flash('success',trans('admin.departmentdeleted'));
            return redirect(url('bonuses'));  
     }

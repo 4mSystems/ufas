@@ -3,31 +3,37 @@
 @push('js')
 
 <script type="text/javascript">
+  
+$(document).ready(function(){ 
 
-$(document).ready(function(){
-  @if($employee->dept_id)
+  @if($employee->dept_id) 
   $.ajax({
     url:"{{url('employee/'.$employee->id.'/edit')}}",
     type:'get',
     datatype:'html',
     data:{dept_id:"{{$employee->dept_id}}",select:"{{$employee->job_id}}"},
-    info:function(data){
+    success:function(data){ 
       $('.job').html(data);
+       
     }
   });
   @endif
+
 $(document).on('change','.dept_id',function(){
 var department=$('.dept_id option:selected').val();
 if(department >0){
-  $.ajax({
+  $.ajax({ 
+
     url:"{{url('employee/'.$employee->id.'/edit')}}",
     type:'get',
     datatype:'html',
     data:{dept_id:department,select:""},
-    info:function(data){
+    
+    success:function(data){
+    
       $('.job').html(data);
     }
-  });
+  }); 
 
 }else {  $('.job').html('');}
 });
@@ -123,7 +129,7 @@ if(department >0){
 
             <div class="form-group"> 
             <strong>{{trans('admin.job')}}</strong>  
-          <span class='job'></sapn>
+            <span class='job'></sapn>
             </div> 
 
 
